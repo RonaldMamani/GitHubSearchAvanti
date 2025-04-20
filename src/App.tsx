@@ -1,7 +1,9 @@
+import Home from "./page/Home"
+
 function App() {
   return (
     <>
-      <p className='text-6xl text-amber-700'>Hola Mundo</p>
+      <Home />
     </>
   )
 }
