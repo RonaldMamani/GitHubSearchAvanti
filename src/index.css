@@ -3,3 +3,23 @@
 body {
     font-family: 'Nunito Sans', sans-serif;
 }
+
+@layer utilities {
+    @keyframes move-x {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(400px); }
+    }
+
+    @keyframes move-diagonal {
+        0%, 100% { transform: translate(0, 0); }
+        50% { transform: translate(400px, -200px); }
+    }
+
+    .animate-move-x {
+        animation: move-x 10s ease-in-out infinite;
+    }
+
+    .animate-move-diagonal {
+        animation: move-diagonal 12s ease-in-out infinite;
+    }
+}
