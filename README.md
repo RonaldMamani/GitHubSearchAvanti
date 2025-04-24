@@ -1,54 +1,54 @@
-# React + TypeScript + Vite
+# 🔍 Busca de Perfil no GitHub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é uma aplicação web desenvolvida com **ReactJS**, **TypeScript** e **TailwindCSS**, que permite buscar perfis do GitHub através do nome de usuário. A interface foi construída seguindo um layout disponibilizado no Figma.
 
-Currently, two official plugins are available:
+## 📝 Objetivo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Criar uma aplicação React que:
 
-## Expanding the ESLint configuration
+- Permita ao usuário digitar o nome de um perfil do GitHub.
+- Busque os dados na API pública do GitHub.
+- Exiba as informações básicas do perfil (nome, bio e avatar).
+- Informe ao usuário caso o perfil não seja encontrado.
+- Siga o layout proposto no Figma.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🎨 Layout (Figma)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Acesse o layout clicando no link abaixo:
+
+🔗 [Visualizar layout no Figma](https://www.figma.com/proto/DqtFxC6312M32mLt8FpJjq/inovation-class?page-id=22%3A2864&node-id=22-4293&viewport=359%2C115%2C0.25&t=SHsEqEgaMrXGMKwv-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=22%3A4293&show-proto-sidebar=1)
+
+## ✅ Funcionalidades
+
+- Campo de busca para nome de usuário do GitHub.
+- Botão de busca para acionar a requisição.
+- Exibição dos dados do usuário:
+  - Nome
+  - Foto de perfil
+  - Biografia
+- Tratamento de erros:
+  - Exibe uma mensagem se o usuário não for encontrado.
+- Responsividade e layout fiel ao design do Figma.
+
+## 🚀 Tecnologias utilizadas
+
+- [ReactJS](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [API do GitHub](https://docs.github.com/en/rest/users/users)
+
+## 📦 Instalação e execução
+
+Clone o repositório e instale as dependências:
+
+```bash
+git clone https://github.com/seu-usuario/projeto-busca-github.git
+cd projeto-busca-github
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Site Hospedado
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Segue abaixo o link do site hospedado na vercel
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+link: https://git-hub-search-avanti.vercel.app/
